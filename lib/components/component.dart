@@ -2,20 +2,23 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class component extends StatelessWidget {
+  static const String IMAGE_URL = "https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: Text("Toobar")),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: getTextWidgets(
-              "https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg"),
-        ));
+    body: Column(
+    mainAxisAlignment: MainAxisAlignment.start,
+    crossAxisAlignment: CrossAxisAlignment.stretch,
+    children: getTextWidgets(
+    IMAGE_URL
+    )
+    ));
   }
 
-  Widget _section(
-      String title, Color color, Color textColor, TextAlign textAlign) {
+  Widget _section(String title, Color color, Color textColor,
+      TextAlign textAlign) {
     return InkWell(
         onTap: () {
           print("clicked: " +
