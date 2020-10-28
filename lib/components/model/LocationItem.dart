@@ -1,5 +1,4 @@
-
-class LocationItem{
+class LocationItem {
   String title;
   String image_url;
 
