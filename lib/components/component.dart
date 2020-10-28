@@ -37,8 +37,9 @@ class component extends StatelessWidget {
   List<Widget> getTextWidgets(String url) {
     List<Widget> result = new List();
     result.add(getImage(url));
+    result.add(getTitle("The title is here."));
     for (int i = 0; i < 10; i++) {
-      result.add(_section("one", Colors.red, Colors.white, TextAlign.right));
+      result.add(_section("one"+i.toString(), Colors.red, Colors.white, TextAlign.right));
     }
     return result;
   }
@@ -48,4 +49,13 @@ class component extends StatelessWidget {
         margin: const EdgeInsets.only(bottom: 10.0),
         child: Image.network(url, fit: BoxFit.fitWidth));
   }
+
+  Widget getTitle(String title){
+    return Container(
+      padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+      child: Text(title,
+            style: TextStyle(fontSize: 20.1, color: Colors.black), textAlign: TextAlign.left)
+    );
+  }
+
 }
