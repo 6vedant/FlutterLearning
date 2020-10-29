@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/components/component.dart';
+import 'package:flutter_app/components/custom_button.dart';
 import 'package:flutter_app/components/model/LocationItem.dart';
 
 class listview_image_title extends StatelessWidget {
@@ -22,7 +23,11 @@ class listview_image_title extends StatelessWidget {
               onTap: () => _navigateToOther(context, this.locations[index]),
             );
           },
-        ));
+        ),
+      floatingActionButton: CustomButton(
+        onPressed: (){print("custom button clicked");},
+      ),
+    );
   }
 
   void _navigateToOther(BuildContext buildContext, LocationItem locationItem){
